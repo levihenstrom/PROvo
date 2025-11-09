@@ -3,42 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PROvo Analytics | BYU Basketball Data</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/charts/byu.png">
-  <link rel="apple-touch-icon" href="assets/charts/byu.png">
+  <title>PROvo Analytics</title>
 
-  <!-- Link to your CSS -->
-  <link href="css/style.css" rel="stylesheet" />
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
 
-  <!-- Include Plotly for charts -->
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/charts/byu.png" />
+  <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+
+  <!-- Optional JS for nav, charts, etc. -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js" defer></script>
+  <script src="assets/js/scripts.js" defer></script>
+  <script src="/assets/js/layout.js" defer></script>
 </head>
+<body style="background-color: var(--byu-white); color: var(--byu-navy);">
 
-<body>
-  <header>
-    <h1>🏀 PROvo Analytics</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="deminvjimmer.html">Demin vs. Jimmer</a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero">
-      <h2>Quantifying BYU’s PROvo Era</h2>
-      <p>
-        Data-driven insights into player development and professional readiness under
-        BYU Basketball’s new PROvo program.
+ <!-- Shared Footer -->
+ <div id="nav-placeholder" ></div>
+  
+  
+<!-- Hero -->
+<section id="hero" class="py-5 text-center" style="background-color: var(--byu-royal); color: var(--byu-white);">
+    <div class="container">
+      <h1 class="display-4 fw-bold mb-3">Is PROvo working?</h1>
+      <p class="lead mb-4">
+        Tracking how BYU players perform from Provo to the pros.
       </p>
-      <a class="button" href="deminvjimmer.html">View Dashboard</a>
-    </section>
-  </main>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="analytics.html" class="btn btn-light btn-lg">
+          Explore Analytics
+        </a>
+        <a href="schedule.html" class="btn btn-outline-light btn-lg">
+          View Schedule
+        </a>
+      </div>
+    </div>
+  </section>
 
-  <footer>
-    <p>© 2025 Levi Henstrom | PROvo Analytics</p>
-  </footer>
+  <!-- (Optional tiny blurb section) -->
+  <section class="py-5">
+    <div class="container text-center">
+      <p class="mb-0">
+        PROvo Analytics is a focused, living project built to look and feel like an internal
+        analytics resource for BYU Men’s Basketball — not a generic portfolio.
+      </p>
+    </div>
+  </section>
+  
+ <!-- Shared Footer -->
+ <div id="footer-placeholder" ></div>
 
-  <!-- Your JS -->
-  <script src="assets/js/scripts.js"></script>
 </body>
 </html>

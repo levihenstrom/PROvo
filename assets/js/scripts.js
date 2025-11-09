@@ -18,4 +18,3 @@ document.addEventListener("DOMContentLoaded", function() {
     };
     Plotly.newPlot('points-chart', [trace1, trace2], layout);
   });
-  

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demin vs. Jimmer | PROvo Analytics</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="assets/charts/byu.png" />
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="assets/js/scripts.js" defer></script>
+</head>
+<body style="background-color: var(--byu-white); color: var(--byu-navy);">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg" style="background-color: var(--byu-navy);">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html" style="color: var(--byu-white);">
+        <img src="assets/charts/byu.png" alt="BYU Logo" width="28" height="28" class="me-2">
+        <span>PROvo Analytics</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link" style="color: var(--byu-white);">Home</a></li>
+          <li class="nav-item"><a href="#analysis" class="nav-link" style="color: var(--byu-white);">Analysis</a></li>
+          <li class="nav-item"><a href="#methods" class="nav-link" style="color: var(--byu-white);">Methods</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="py-4" style="background-color: var(--byu-royal); color: var(--byu-white);">
+    <div class="container">
+      <h1 class="h2 mb-1">Egor Demin vs. Jimmer Fredette</h1>
+      <p class="mb-0">
+        Comparing BYU’s two modern first-rounders using real rookie-season NBA performance data.
+      </p>
+    </div>
+  </header>
+
+  <main class="py-5">
+    <div class="container">
+
+      <!-- Overview -->
+      <section id="analysis" class="mb-5">
+        <h2 class="h4 mb-3" style="color: var(--byu-navy);">Analytical Overview</h2>
+        <p>
+          This dashboard examines early NBA performance for
+          <strong>Egor Demin</strong> (2025–26) and <strong>Jimmer Fredette</strong> (2011–12),
+          using game-by-game box scores to compare:
+        </p>
+        <ul>
+          <li>Scoring output and consistency over games.</li>
+          <li>Minutes and usage vs. per-game production.</li>
+          <li>Early efficiency signals (shooting splits, per-minute scoring).</li>
+        </ul>
+        <p class="text-muted">
+          Built as a Smartabase-style view: simple, actionable visuals that coaches and performance staff
+          can scan in seconds.
+        </p>
+      </section>
+
+      <!-- Chart 1 -->
+      <section class="mb-5">
+        <h3 class="h5 mb-3" style="color: var(--byu-navy);">Game-by-Game Points</h3>
+        <p class="small text-muted">
+          Tracks points across each player’s rookie games. Demin’s initial sample is overlaid against
+          Fredette’s full rookie season to contextualize his start.
+        </p>
+        <div id="points-by-game" class="bg-white border rounded p-3 shadow-sm"></div>
+      </section>
+
+      <!-- Chart 2 -->
+      <section class="mb-5">
+        <h3 class="h5 mb-3" style="color: var(--byu-navy);">Minutes vs. Points</h3>
+        <p class="small text-muted">
+          Shows how efficiently each player converts playing time into scoring.
+          This can highlight whether Demin is maximizing his usage.
+        </p>
+        <div id="minutes-vs-points" class="bg-white border rounded p-3 shadow-sm"></div>
+      </section>
+
+      <!-- Chart 3 -->
+      <section class="mb-5">
+        <h3 class="h5 mb-3" style="color: var(--byu-navy);">Rolling Scoring Trend</h3>
+        <p class="small text-muted">
+          A 3-game rolling average smooths volatility and shows how quickly each player stabilizes
+          at the NBA level.
+        </p>
+        <div id="rolling-points" class="bg-white border rounded p-3 shadow-sm"></div>
+      </section>
+
+      <!-- Methods -->
+      <section id="methods" class="mb-4">
+        <h2 class="h5 mb-2" style="color: var(--byu-navy);">Data & Methods</h2>
+        <p class="small text-muted">
+          Data sourced from public NBA box scores. Totals rows removed; minutes converted from MM:SS
+          to decimal; core metrics standardized (PTS, MIN, FG%, 3P%, AST, REB).
+          Visuals generated in Python and rendered with Plotly.js for this page.
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer style="background-color: var(--byu-navy); color: var(--byu-white); padding: 0.75rem 0;">
+    <div class="container text-center">
+      <small>© 2025 PROvo Analytics · Built by Levi Henstrom</small>
+    </div>
+  </footer>
+
+</body>
+</html>
